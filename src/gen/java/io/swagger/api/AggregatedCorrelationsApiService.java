@@ -1,0 +1,42 @@
+package io.swagger.api;
+
+import io.swagger.api.*;
+import io.swagger.model.*;
+
+import com.sun.jersey.multipart.FormDataParam;
+
+import java.math.BigDecimal;
+import io.swagger.model.InlineResponse200;
+import io.swagger.model.AggregatedCorrelation;
+import io.swagger.model.InlineResponse2001;
+import io.swagger.model.InlineResponse2002;
+
+import java.util.List;
+import io.swagger.api.NotFoundException;
+
+import java.io.InputStream;
+
+import com.sun.jersey.core.header.FormDataContentDisposition;
+import com.sun.jersey.multipart.FormDataParam;
+
+import javax.ws.rs.core.Response;
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JaxRSServerCodegen", date = "2015-11-03T22:24:17.454Z")
+public abstract class AggregatedCorrelationsApiService {
+  
+      public abstract Response aggregatedCorrelationsGet(BigDecimal correlation,Integer causeId,Integer effectId,Integer onsetDelay,Integer durationOfAction,Integer numberOfPairs,BigDecimal valuePredictingHighOutcome,BigDecimal valuePredictingLowOutcome,BigDecimal optimalPearsonProduct,BigDecimal vote,Integer numberOfUsers,Integer numberOfCorrelations,BigDecimal statisticalSignificance,String causeUnit,Integer causeUnitId,Integer causeChanges,Integer effectChanges,BigDecimal aggregateQmScore,String createdAt,String updatedAt,String status,String errorMessage,String lastSuccessfulUpdateTime,BigDecimal reversePearsonCorrelationCoefficient,BigDecimal predictivePearsonCorrelationCoefficient,Integer limit,Integer offset,String sort)
+      throws NotFoundException;
+  
+      public abstract Response aggregatedCorrelationsPost(AggregatedCorrelation body)
+      throws NotFoundException;
+  
+      public abstract Response aggregatedCorrelationsIdGet(Integer id)
+      throws NotFoundException;
+  
+      public abstract Response aggregatedCorrelationsIdPut(Integer id,AggregatedCorrelation body)
+      throws NotFoundException;
+  
+      public abstract Response aggregatedCorrelationsIdDelete(Integer id)
+      throws NotFoundException;
+  
+}
