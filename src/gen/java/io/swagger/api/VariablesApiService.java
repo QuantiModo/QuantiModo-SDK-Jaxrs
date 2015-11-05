@@ -21,7 +21,7 @@ import com.sun.jersey.multipart.FormDataParam;
 
 import javax.ws.rs.core.Response;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JaxRSServerCodegen", date = "2015-11-03T22:24:17.454Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JaxRSServerCodegen", date = "2015-11-05T03:16:00.332Z")
 public abstract class VariablesApiService {
   
       public abstract Response variablesGet(Integer id,String clientId,Integer parentId,String name,Integer variableCategoryId,Integer defaultUnitId,String combinationOperation,BigDecimal fillingValue,BigDecimal maximumAllowedValue,BigDecimal minimumAllowedValue,Integer onsetDelay,Integer durationOfAction,Integer _public,Boolean causeOnly,BigDecimal mostCommonValue,Integer mostCommonUnitId,BigDecimal standardDeviation,BigDecimal variance,BigDecimal mean,BigDecimal median,BigDecimal numberOfMeasurements,BigDecimal numberOfUniqueValues,BigDecimal skewness,BigDecimal kurtosis,BigDecimal latitude,BigDecimal longitude,String location,String status,String errorMessage,String lastSuccessfulUpdateTime,String createdAt,String updatedAt,String productUrl,String imageUrl,BigDecimal price,Integer numberOfUserVariables,Boolean outcome,BigDecimal minimumRecordedValue,BigDecimal maximumRecordedValue,Integer limit,Integer offset,String sort)

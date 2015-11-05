@@ -31,7 +31,7 @@ import javax.ws.rs.*;
 @Consumes({ "application/json" })
 @Produces({ "application/json" })
 @io.swagger.annotations.Api(value = "/measurements", description = "the measurements API")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JaxRSServerCodegen", date = "2015-11-03T22:24:17.454Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JaxRSServerCodegen", date = "2015-11-05T03:16:00.332Z")
 public class MeasurementsApi  {
 
    private final MeasurementsApiService delegate = MeasurementsApiServiceFactory.getMeasurementsApi();
@@ -81,7 +81,7 @@ public class MeasurementsApi  {
     @Path("/csv")
     @Consumes({ "application/json" })
     @Produces({ "text/csv" })
-    @io.swagger.annotations.ApiOperation(value = "Get Measurements CSV", notes = "Get Measurements CSV", response = File.class)
+    @io.swagger.annotations.ApiOperation(value = "Get Measurements CSV", notes = "Download a CSV containing all user measurements", response = File.class)
     @io.swagger.annotations.ApiResponses(value = { 
         @io.swagger.annotations.ApiResponse(code = 200, message = "successful operation", response = File.class) })
 
@@ -93,7 +93,7 @@ public class MeasurementsApi  {
     @Path("/request_csv")
     @Consumes({ "application/json" })
     @Produces({ "application/json" })
-    @io.swagger.annotations.ApiOperation(value = "Post Request for Measurements CSV", notes = "Post Request for Measurements CSV", response = Integer.class)
+    @io.swagger.annotations.ApiOperation(value = "Post Request for Measurements CSV", notes = "Use this endpoint to schedule a CSV export containing all user measurements to be emailed to the user within 24 hours.", response = Integer.class)
     @io.swagger.annotations.ApiResponses(value = { 
         @io.swagger.annotations.ApiResponse(code = 200, message = "successful operation", response = Integer.class) })
 

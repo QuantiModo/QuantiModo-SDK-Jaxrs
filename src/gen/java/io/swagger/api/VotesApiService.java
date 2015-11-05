@@ -20,7 +20,7 @@ import com.sun.jersey.multipart.FormDataParam;
 
 import javax.ws.rs.core.Response;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JaxRSServerCodegen", date = "2015-11-03T22:24:17.454Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JaxRSServerCodegen", date = "2015-11-05T03:16:00.332Z")
 public abstract class VotesApiService {
   
       public abstract Response votesGet(String clientId,Integer userId,Integer causeId,Integer effectId,Integer value,String createdAt,String updatedAt,Integer limit,Integer offset,String sort)

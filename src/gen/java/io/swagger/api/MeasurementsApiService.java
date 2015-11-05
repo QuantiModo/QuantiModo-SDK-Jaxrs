@@ -23,7 +23,7 @@ import com.sun.jersey.multipart.FormDataParam;
 
 import javax.ws.rs.core.Response;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JaxRSServerCodegen", date = "2015-11-03T22:24:17.454Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JaxRSServerCodegen", date = "2015-11-05T03:16:00.332Z")
 public abstract class MeasurementsApiService {
   
       public abstract Response measurementsGet(Integer userId,String clientId,Integer connectorId,Integer variableId,Integer startTime,BigDecimal value,BigDecimal originalValue,Integer duration,String note,BigDecimal latitude,BigDecimal longitude,String location,String createdAt,String updatedAt,String error,Integer limit,Integer offset,String sort)
