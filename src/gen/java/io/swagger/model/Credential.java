@@ -1,15 +1,20 @@
 package io.swagger.model;
 
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JaxRSServerCodegen", date = "2015-11-05T03:16:00.332Z")
-public class Credential  {
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaJerseyServerCodegen", date = "2016-02-09T02:16:56.359Z")
+public class Credential   {
   
+  private Integer userId = null;
   private Integer connectorId = null;
   private String attrKey = null;
   private String attrValue = null;
@@ -18,9 +23,24 @@ public class Credential  {
 
   
   /**
-   * connector_id
+   * ID of user that owns this credential
    **/
-  @ApiModelProperty(required = true, value = "connector_id")
+  
+  @ApiModelProperty(value = "ID of user that owns this credential")
+  @JsonProperty("user_id")
+  public Integer getUserId() {
+    return userId;
+  }
+  public void setUserId(Integer userId) {
+    this.userId = userId;
+  }
+
+  
+  /**
+   * The id for the connector data source from which the credential was obtained
+   **/
+  
+  @ApiModelProperty(required = true, value = "The id for the connector data source from which the credential was obtained")
   @JsonProperty("connector_id")
   public Integer getConnectorId() {
     return connectorId;
@@ -31,9 +51,10 @@ public class Credential  {
 
   
   /**
-   * attr_key
+   * Attribute name such as token, userid, username, or password
    **/
-  @ApiModelProperty(value = "attr_key")
+  
+  @ApiModelProperty(value = "Attribute name such as token, userid, username, or password")
   @JsonProperty("attr_key")
   public String getAttrKey() {
     return attrKey;
@@ -44,9 +65,10 @@ public class Credential  {
 
   
   /**
-   * attr_value
+   * Encrypted value for the attribute specified
    **/
-  @ApiModelProperty(value = "attr_value")
+  
+  @ApiModelProperty(value = "Encrypted value for the attribute specified")
   @JsonProperty("attr_value")
   public String getAttrValue() {
     return attrValue;
@@ -57,9 +79,10 @@ public class Credential  {
 
   
   /**
-   * created_at
+   * When the record was first created. Use ISO 8601 datetime format
    **/
-  @ApiModelProperty(value = "created_at")
+  
+  @ApiModelProperty(value = "When the record was first created. Use ISO 8601 datetime format")
   @JsonProperty("created_at")
   public Date getCreatedAt() {
     return createdAt;
@@ -70,9 +93,10 @@ public class Credential  {
 
   
   /**
-   * updated_at
+   * When the record in the database was last updated. Use ISO 8601 datetime format
    **/
-  @ApiModelProperty(value = "updated_at")
+  
+  @ApiModelProperty(value = "When the record in the database was last updated. Use ISO 8601 datetime format")
   @JsonProperty("updated_at")
   public Date getUpdatedAt() {
     return updatedAt;
@@ -84,16 +108,51 @@ public class Credential  {
   
 
   @Override
-  public String toString()  {
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Credential credential = (Credential) o;
+    return Objects.equals(userId, credential.userId) &&
+        Objects.equals(connectorId, credential.connectorId) &&
+        Objects.equals(attrKey, credential.attrKey) &&
+        Objects.equals(attrValue, credential.attrValue) &&
+        Objects.equals(createdAt, credential.createdAt) &&
+        Objects.equals(updatedAt, credential.updatedAt);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(userId, connectorId, attrKey, attrValue, createdAt, updatedAt);
+  }
+
+  @Override
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Credential {\n");
     
-    sb.append("  connectorId: ").append(connectorId).append("\n");
-    sb.append("  attrKey: ").append(attrKey).append("\n");
-    sb.append("  attrValue: ").append(attrValue).append("\n");
-    sb.append("  createdAt: ").append(createdAt).append("\n");
-    sb.append("  updatedAt: ").append(updatedAt).append("\n");
-    sb.append("}\n");
+    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    connectorId: ").append(toIndentedString(connectorId)).append("\n");
+    sb.append("    attrKey: ").append(toIndentedString(attrKey)).append("\n");
+    sb.append("    attrValue: ").append(toIndentedString(attrValue)).append("\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+    sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
+    sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

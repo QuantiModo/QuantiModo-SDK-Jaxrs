@@ -1,33 +1,39 @@
 package io.swagger.model;
 
-import io.swagger.model.UnitCategory;
-
-import io.swagger.annotations.*;
+import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.model.Connector;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JaxRSServerCodegen", date = "2015-11-05T03:16:00.332Z")
-public class InlineResponse20016  {
+
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaJerseyServerCodegen", date = "2016-02-09T02:16:56.359Z")
+public class InlineResponse20016   {
   
-  private UnitCategory data = null;
+  private Connector data = null;
   private Boolean success = null;
 
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("data")
-  public UnitCategory getData() {
+  public Connector getData() {
     return data;
   }
-  public void setData(UnitCategory data) {
+  public void setData(Connector data) {
     this.data = data;
   }
 
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("success")
   public Boolean getSuccess() {
@@ -40,13 +46,43 @@ public class InlineResponse20016  {
   
 
   @Override
-  public String toString()  {
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    InlineResponse20016 inlineResponse20016 = (InlineResponse20016) o;
+    return Objects.equals(data, inlineResponse20016.data) &&
+        Objects.equals(success, inlineResponse20016.success);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(data, success);
+  }
+
+  @Override
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse20016 {\n");
     
-    sb.append("  data: ").append(data).append("\n");
-    sb.append("  success: ").append(success).append("\n");
-    sb.append("}\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    success: ").append(toIndentedString(success)).append("\n");
+    sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

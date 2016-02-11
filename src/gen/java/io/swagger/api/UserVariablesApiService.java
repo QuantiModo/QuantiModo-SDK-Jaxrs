@@ -5,9 +5,9 @@ import io.swagger.model.*;
 
 import com.sun.jersey.multipart.FormDataParam;
 
-import io.swagger.model.InlineResponse20021;
+import io.swagger.model.InlineResponse2009;
 import java.math.BigDecimal;
-import io.swagger.model.InlineResponse20022;
+import io.swagger.model.InlineResponse20030;
 import io.swagger.model.UserVariable;
 import io.swagger.model.InlineResponse2002;
 
@@ -20,23 +20,24 @@ import com.sun.jersey.core.header.FormDataContentDisposition;
 import com.sun.jersey.multipart.FormDataParam;
 
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.SecurityContext;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JaxRSServerCodegen", date = "2015-11-05T03:16:00.332Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaJerseyServerCodegen", date = "2016-02-09T02:16:56.359Z")
 public abstract class UserVariablesApiService {
   
-      public abstract Response userVariablesGet(String clientId,Integer variableId,Integer defaultUnitId,BigDecimal minimumAllowedValue,BigDecimal maximumAllowedValue,BigDecimal fillingValue,Integer joinWith,Integer onsetDelay,Integer durationOfAction,Integer variableCategoryId,Integer updated,Integer _public,Boolean causeOnly,String fillingType,Integer numberOfMeasurements,Integer numberOfProcessedMeasurements,Integer measurementsAtLastAnalysis,Integer lastUnitId,Integer lastOriginalUnitId,Integer lastOriginalValue,BigDecimal lastValue,Integer lastSourceId,Integer numberOfCorrelations,String status,String errorMessage,String lastSuccessfulUpdateTime,BigDecimal standardDeviation,BigDecimal variance,BigDecimal minimumRecordedDailyValue,BigDecimal maximumRecordedDailyValue,BigDecimal mean,BigDecimal median,Integer mostCommonUnitId,BigDecimal mostCommonValue,BigDecimal numberOfUniqueDailyValues,Integer numberOfChanges,BigDecimal skewness,BigDecimal kurtosis,BigDecimal latitude,BigDecimal longitude,String location,String createdAt,String updatedAt,Boolean outcome,String sources,Integer earliestSourceTime,Integer latestSourceTime,Integer earliestMeasurementTime,Integer latestMeasurementTime,Integer earliestFillingTime,Integer latestFillingTime,Integer limit,Integer offset,String sort)
+      public abstract Response userVariablesGet(String accessToken,String clientId,Integer parentId,Integer variableId,Integer userId,Integer defaultUnitId,BigDecimal minimumAllowedValue,BigDecimal maximumAllowedValue,BigDecimal fillingValue,Integer joinWith,Integer onsetDelay,Integer durationOfAction,Integer variableCategoryId,Integer updated,Integer _public,Boolean causeOnly,String fillingType,Integer numberOfMeasurements,Integer numberOfProcessedMeasurements,Integer measurementsAtLastAnalysis,Integer lastUnitId,Integer lastOriginalUnitId,Integer lastOriginalValue,BigDecimal lastValue,BigDecimal lastOriginalValue2,Integer lastSourceId,Integer numberOfCorrelations,String status,String errorMessage,String lastSuccessfulUpdateTime,BigDecimal standardDeviation,BigDecimal variance,BigDecimal minimumRecordedValue,BigDecimal maximumRecordedValue,BigDecimal mean,BigDecimal median,Integer mostCommonUnitId,BigDecimal mostCommonValue,BigDecimal numberOfUniqueDailyValues,Integer numberOfChanges,BigDecimal skewness,BigDecimal kurtosis,BigDecimal latitude,BigDecimal longitude,String location,String createdAt,String updatedAt,Boolean outcome,String sources,Integer earliestSourceTime,Integer latestSourceTime,Integer earliestMeasurementTime,Integer latestMeasurementTime,Integer earliestFillingTime,Integer latestFillingTime,Integer limit,Integer offset,String sort,SecurityContext securityContext)
       throws NotFoundException;
   
-      public abstract Response userVariablesPost(UserVariable body)
+      public abstract Response userVariablesPost(String accessToken,UserVariable body,SecurityContext securityContext)
       throws NotFoundException;
   
-      public abstract Response userVariablesIdGet(Integer id)
+      public abstract Response userVariablesIdGet(Integer id,String accessToken,SecurityContext securityContext)
       throws NotFoundException;
   
-      public abstract Response userVariablesIdPut(Integer id,UserVariable body)
+      public abstract Response userVariablesIdPut(Integer id,String accessToken,UserVariable body,SecurityContext securityContext)
       throws NotFoundException;
   
-      public abstract Response userVariablesIdDelete(Integer id)
+      public abstract Response userVariablesIdDelete(Integer id,String accessToken,SecurityContext securityContext)
       throws NotFoundException;
   
 }

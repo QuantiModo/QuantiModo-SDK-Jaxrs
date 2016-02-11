@@ -20,23 +20,24 @@ import com.sun.jersey.core.header.FormDataContentDisposition;
 import com.sun.jersey.multipart.FormDataParam;
 
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.SecurityContext;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JaxRSServerCodegen", date = "2015-11-05T03:16:00.332Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaJerseyServerCodegen", date = "2016-02-09T02:16:56.359Z")
 public abstract class AggregatedCorrelationsApiService {
   
-      public abstract Response aggregatedCorrelationsGet(BigDecimal correlation,Integer causeId,Integer effectId,Integer onsetDelay,Integer durationOfAction,Integer numberOfPairs,BigDecimal valuePredictingHighOutcome,BigDecimal valuePredictingLowOutcome,BigDecimal optimalPearsonProduct,BigDecimal vote,Integer numberOfUsers,Integer numberOfCorrelations,BigDecimal statisticalSignificance,String causeUnit,Integer causeUnitId,Integer causeChanges,Integer effectChanges,BigDecimal aggregateQmScore,String createdAt,String updatedAt,String status,String errorMessage,String lastSuccessfulUpdateTime,BigDecimal reversePearsonCorrelationCoefficient,BigDecimal predictivePearsonCorrelationCoefficient,Integer limit,Integer offset,String sort)
+      public abstract Response aggregatedCorrelationsGet(String accessToken,BigDecimal correlation,Integer causeId,Integer effectId,Integer onsetDelay,Integer durationOfAction,Integer numberOfPairs,BigDecimal valuePredictingHighOutcome,BigDecimal valuePredictingLowOutcome,BigDecimal optimalPearsonProduct,Integer numberOfUsers,Integer numberOfCorrelations,BigDecimal statisticalSignificance,String causeUnit,Integer causeUnitId,Integer causeChanges,Integer effectChanges,BigDecimal aggregateQmScore,String createdAt,String updatedAt,String status,String errorMessage,String lastSuccessfulUpdateTime,BigDecimal reversePearsonCorrelationCoefficient,BigDecimal predictivePearsonCorrelationCoefficient,Integer limit,Integer offset,String sort,SecurityContext securityContext)
       throws NotFoundException;
   
-      public abstract Response aggregatedCorrelationsPost(AggregatedCorrelation body)
+      public abstract Response aggregatedCorrelationsPost(String accessToken,AggregatedCorrelation body,SecurityContext securityContext)
       throws NotFoundException;
   
-      public abstract Response aggregatedCorrelationsIdGet(Integer id)
+      public abstract Response aggregatedCorrelationsIdGet(Integer id,String accessToken,SecurityContext securityContext)
       throws NotFoundException;
   
-      public abstract Response aggregatedCorrelationsIdPut(Integer id,AggregatedCorrelation body)
+      public abstract Response aggregatedCorrelationsIdPut(Integer id,String accessToken,AggregatedCorrelation body,SecurityContext securityContext)
       throws NotFoundException;
   
-      public abstract Response aggregatedCorrelationsIdDelete(Integer id)
+      public abstract Response aggregatedCorrelationsIdDelete(Integer id,String accessToken,SecurityContext securityContext)
       throws NotFoundException;
   
 }
